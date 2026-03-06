@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   この数字から易経の卦を導き出し、今日の波動を魅力的な日本語で占ってください。
   最後に、幸運を呼ぶ「光のイメージ」を1文で添えてください。`;
 
-  const textRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
+  const textRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ contents: [{ parts: [{ text: textPrompt }] }] })
